@@ -1,6 +1,7 @@
 import { HeroSection } from "@components/sections/hero-section";
-import { PracticeAreas } from "./client/components/sections/practice-areas";
-import { WhyChooseUs } from "./client/components/sections/why-choose-us";
+import { PracticeAreas } from "@components/sections/practice-areas";
+import { WhyChooseUs } from "@components/sections/why-choose-us";
+import { CTASection } from "@components/sections/cta-section";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <PracticeAreas />
       <WhyChooseUs />
+      <CTASection />
     </>
   );
 }
