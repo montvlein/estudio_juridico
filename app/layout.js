@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import JsonLd from "@components/JsonLd";
+import { Footer } from "@components/Footer";
+import { Navigation } from "@components/Navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,7 +79,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}
       >
-        {children}
+        <header className="sticky top-0 z-50 bg-white shadow-md">
+          <Navigation/>
+        </header>
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer/>
         <JsonLd data={jsonLdData} />
       </body>
     </html>
